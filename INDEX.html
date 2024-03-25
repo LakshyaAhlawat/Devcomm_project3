@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Online Store</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+    }
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    nav {
+        background-color: #666;
+        padding: 10px 0;
+        text-align: center;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .product {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        overflow: hidden;
+        width: 300px;
+        position: relative;
+        transition: transform 0.3s ease;
+    }
+    .product:hover {
+        transform: scale(1.05);
+    }
+    .product img {
+        width: 100%;
+        height: auto;
+    }
+    .product-info {
+        padding: 20px;
+    }
+    .product-title {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    .product-price {
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    .product-btn {
+        display: block;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .product-btn:hover {
+        background-color: #555;
+    }
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: opacity 0.3s ease;
+    }
+    .product:hover .slide {
+        display: flex;
+    }
+    .slide-content {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .slide:hover .slide-content {
+        opacity: 1;
+    }
+    .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    .contact-form:hover {
+        transform: translateY(-10px);
+    }
+    .contact-form input[type="text"],
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    .contact-form textarea {
+        height: 100px;
+    }
+    .contact-form input[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .contact-form input[type="submit"]:hover {
+        background-color: #555;
+    }
+</style>
+</head>
+<body>
+<header style="background-color: #4CAF50;">
+    <h1>My Online Store</h1>
+</header>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+</nav>
+<div id="home" class="container">
+    <h2>Welcome to Our Store</h2>
+    <!-- Content for home page goes here -->
+</div>
+<div id="products" class="container">
+    <div class="product">
+        <img src="https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?cs=srgb&dl=beef-bread-buns-1633578.jpg&fm=jpg" alt="Product Image">
+        <div class="product-info">
+            <h2 class="product-title">Product 1</h2>
+            <p class="product-price">$19.99</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        <div class="slide">
+            <div class="slide-content">
+                <h3>Product Description</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, doloremque.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Add more products here -->
+    <!-- Example of another product -->
+    <div class="product">
+        <img src="https://ae01.alicdn.com/kf/HTB1kjLcdlsmBKNjSZFFq6AT9VXae/GUANQIN-Mens-Watches-Top-Brand-Luxury-Tourbillon-Skeleton-Watch-Men-Sport-Leather-Waterproof-Automatic-Mechanical-Wrist.jpg" alt="Product Image">
+        <div class="product-info">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-price">$29.99</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        <div class="slide">
+            <div class="slide-content">
+                <h3>Product Description</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, voluptas.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="https://th.bing.com/th/id/OIP.9sJk91v7ypw-_59TYIQXlgHaHa?rs=1&pid=ImgDetMain" alt="Product Image">
+        <div class="product-info">
+            <h2 class="product-title">Product 3</h2>
+            <p class="product-price">$29.99</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        <div class="slide">
+            <div class="slide-content">
+                <h3>Product Description</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, vero.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8M3x8Z3JvY2VyeSUyMHN0b3JlfHwwfHx8fDE2MTk4MDIxNzg&ixlib=rb-1.2.1&q=80&w=1080" alt="Product Image">
+        <div class="product-info">
+            <h2 class="product-title">Product 4</h2>
+            <p class="product-price">$29.99</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        <div class="slide">
+            <div class="slide-content">
+                <h3>Product Description</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, esse!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="https://www.sportscenter.co.id/assets/Uploads/_resampled/SetWidth1920-1-New-Full-Set-Raket-Badminton-Lining-Superlite-Max-9-Black-Red.jpg" alt="Product Image">
+        <div class="product-info">
+            <h2 class="product-title">Product 5</h2>
+            <p class="product-price">$29.99</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        <div class="slide">
+            <div class="slide-content">
+                <h3>Product Description</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, voluptate.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="https://th.bing.com/th/id/OIP.A8ftgnuAYrxfilsEjhHTdgHaHa?rs=1&pid=ImgDetMain" alt="Product Image">
+        <div class="product-info">
+            <h2 class="product-title">Product 6</h2>
+            <p class="product-price">$29.99</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        <div class="slide">
+            <div class="slide-content">
+                <h3>Product Description</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, sed?</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="https://th.bing.com/th/id/OIP.0pnDwbt4fqq4HoPaafIZHQHaEy?rs=1&pid=ImgDetMain" alt="Product Image">
+        <div class="product-info">
+            <h2 class="product-title">Product 7</h2>
+            <p class="product-price">$29.99</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        <div class="slide">
+            <div class="slide-content">
+                <h3>Product Description</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, voluptate?</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="https://i5.walmartimages.com/asr/3c72b534-5b95-4d29-9cf7-acf86336bffb.bc3610357c336a1d9881099091c99343.jpeg" alt="Product Image">
+        <div class="product-info">
+            <h2 class="product-title">Product 8</h2>
+            <p class="product-price">$29.99</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        <div class="slide">
+            <div class="slide-content">
+                <h3>Product Description</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, soluta?</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="https://cdn.sweatband.com/asics_gel-cumulus_16_mens_running_shoes_ss15_angle_view_2000x2000.jpg" alt="Product Image">
+        <div class="product-info">
+            <h2 class="product-title">Product 9</h2>
+            <p class="product-price">$29.99</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        <div class="slide">
+            <div class="slide-content">
+                <h3>Product Description</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed, neque.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="https://www.marketing91.com/wp-content/uploads/2019/06/Most-Expensive-Bottle-of-Water.jpg" alt="Product Image">
+        <div class="product-info">
+            <h2 class="product-title">Product 10</h2>
+            <p class="product-price">$29.99</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        <div class="slide">
+            <div class="slide-content">
+                <h3>Product Description</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, voluptatibus.</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="product">
+        <img src="https://i5.walmartimages.com/asr/2021aeb8-d71d-4868-a44e-63594f6c2b30_1.4c382c3061d6307daa96a377ee714687.jpeg?odnWidth=1000&odnHeight=1000&odnBg=ffffff" alt="Product Image">
+        <div class="product-info">
+            <h2 class="product-title">Product 11</h2>
+            <p class="product-price">$29.99</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        <div class="slide">
+            <div class="slide-content">
+                <h3>Product Description</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, voluptatibus.</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="product">
+        <img src="https://i5.walmartimages.com/asr/199ab764-f112-4508-888c-86a1094624e8.17daf90b726900a539a8b9873fdea1f5.jpeg" alt="Product Image">
+        <div class="product-info">
+            <h2 class="product-title">Product 12</h2>
+            <p class="product-price">$29.99</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        <div class="slide">
+            <div class="slide-content">
+                <h3>Product Description</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, voluptatibus.</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Add more products here -->
+    <!-- Example of another product -->
+    <!-- Add more products here -->
+    <!-- Example of another product -->
+    <!-- Add more products here -->
+    <!-- Example of another product -->
+    <!-- Add more products here -->
+    <!-- Example of another product -->
+    <!-- Add more products here -->
+    <!-- Example of another product -->
+</div>
+<div id="contact" class="container">
+    <h2>Contact Us</h2>
+    <div class="contact-form">
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="text" name="email" placeholder="Your Email">
+            <textarea name="message" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+</div>
+
+<script>
+    const products = document.querySelectorAll('.product');
+    products.forEach(product => {
+        product.addEventListener('click', () => {
+            products.forEach(p => {
+                if (p !== product) {
+                    p.style.transform = 'translateX(-100%)';
+                }
+            });
+        });
+    });
+</script
